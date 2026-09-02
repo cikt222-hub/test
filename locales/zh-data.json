@@ -1,0 +1,472 @@
+[
+  {
+    "id": "dub-velikan",
+    "name": "Bobruisk Giant Oak",
+    "category": "botanical",
+    "categoryName": "地方级植物自然纪念碑",
+    "coords": [
+      53.142472,
+      29.229936
+    ],
+    "coordsAccuracy": "verified",
+    "images": [
+      "images/dub.jpg",
+      "images/dub2.jpg",
+      "images/dub3.jpg"
+    ],
+    "shortDesc": "位于果戈里街与琼加尔斯卡娅街交叉口的巨橡，是博布鲁伊斯克一棵树龄超过300年的古树。",
+    "fullDesc": "📍 位置：\n白俄罗斯博布鲁伊斯克，果戈里街与琼加尔斯卡娅街交叉口，靠近博布鲁伊斯克要塞。\n\n📌 地位与历史：\n2003年该树被认定为地方级植物自然纪念碑，树龄超过300年。\n\n🌿 特征：\n树干直径1.4米，高28米。树冠南北约17.1米，东西约24.2米。原始演示材料特别指出树冠受风面积的重要性。",
+    "videoUrl": "https://www.youtube.com/watch?v=lID9qVGFLwE",
+    "sources": [
+      {
+        "title": "A. Udodov，《巨橡》//《莫吉廖夫公报》，2001年11月6日。第4页。"
+      },
+      {
+        "title": "Komkur — 关于巨橡的文章",
+        "url": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
+      }
+    ],
+    "details": {
+      "year": "2003",
+      "status": "地方级植物自然纪念碑"
+    },
+    "qrUrl": "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody",
+    "qrLinks": [
+      "https://komkur.info/obshchestvo/pochemu-dub-velikan-v-bobrujske-sobirayutsya-lishit-statusa-pamyatnika-prirody"
+    ]
+  },
+  {
+    "id": "lukovaya-gora",
+    "name": "Lukovaya Gora",
+    "category": "landscape",
+    "categoryName": "地方级景观保护区",
+    "coords": [
+      53.204935,
+      29.230676
+    ],
+    "coordsAccuracy": "verified",
+    "images": [
+      "images/luk.jpg",
+      "images/luk2.jpg"
+    ],
+    "shortDesc": "位于博布鲁伊斯克北部边缘别列津纳河右岸，介于第六微区和别列津纳居民点之间。面积30.5公顷。",
+    "fullDesc": "📍 位置：\n博布鲁伊斯克别列津纳居民点，城市北部别列津纳河右岸。\n\n📌 地位与历史：\n保护区建于1994年，用于保护中央别列津纳冰水平原的典型地貌及其丰富的动植物。\n\n🏞 特征：\n长度约1000米，面积30.5公顷，河漫滩以上坡高约30米。\n\n🌍 地质：\n当地景观受到第聂伯河和索日冰期冰水沉积物影响，也能观察到现代河流活动。",
+    "videoUrl": "https://www.youtube.com/watch?v=HPYyQz29i0s",
+    "sources": [
+      {
+        "title": "T. Golubeva，《卢科瓦亚山》//《博布鲁伊斯克生活》，2009年7月1日。第10页。"
+      },
+      {
+        "title": "莫吉廖夫州旅游地图 — 卢科瓦亚山",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+      },
+      {
+        "title": "博布鲁伊斯克 Wiki — 卢科瓦亚山",
+        "url": "https://wiki.bobr.by/Луковая_гора"
+      }
+    ],
+    "details": {
+      "area": "30,5 га",
+      "year": "1994",
+      "status": "地方级景观保护区"
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+      "https://wiki.bobr.by/Луковая_гора"
+    ]
+  },
+  {
+    "id": "dubovski-kaskad",
+    "name": "Dubovski Cascade of Lakes",
+    "category": "landscape",
+    "categoryName": "地方级景观保护区",
+    "coords": [
+      53.0582,
+      29.347
+    ],
+    "coordsAccuracy": "approximate",
+    "images": [
+      "images/dubkas.jpg",
+      "images/dubkas2.jpg"
+    ],
+    "shortDesc": "维尔河谷的独特景观：河流在14公里范围内连接四个湖泊——德拉戈钦、乌索赫、普拉文和维亚霍沃。",
+    "fullDesc": "📍 位置：\n白俄罗斯莫吉廖夫州博布鲁伊斯克区，特卢沙镇以西4公里的普里别列津斯科耶林业区。面积191公顷。\n\n📌 地位与历史：\n建于1994年，用于保护维尔河谷独特的自然景观。\n\n💧 湖泊链：\n维尔河自北向南14公里范围内连接四个湖泊——德拉戈钦、乌索赫、普拉文和维亚霍沃。演示材料指出这种现象在莫吉廖夫州独一无二。\n\n🌿 自然价值：\n这里有白俄罗斯红皮书及世界自然保护联盟相关红色名录中珍稀动植物的栖息地。",
+    "videoUrl": "https://www.youtube.com/watch?v=GvgooxmePsU",
+    "sources": [
+      {
+        "title": "E. Verbitsky，《有值得惊叹之处》//《白俄罗斯林业报》，2014年4月24日。第7页。"
+      },
+      {
+        "title": "莫吉廖夫州旅游地图 — 博布鲁伊斯克区自然景点",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+      },
+      {
+        "title": "博布鲁伊斯克区执行委员会 — 杜博夫湖泊链",
+        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/497-priroda"
+      }
+    ],
+    "details": {
+      "area": "191 га",
+      "year": "1994",
+      "status": "地方级景观保护区"
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html"
+    ]
+  },
+  {
+    "id": "vekovaya-sosna",
+    "name": "Century Pine",
+    "category": "botanical",
+    "categoryName": "地方级植物自然纪念碑",
+    "coords": [
+      53.034,
+      29.15
+    ],
+    "coordsAccuracy": "approximate",
+    "images": [
+      "images/veksos.jpg",
+      "images/veksos2.jpg"
+    ],
+    "shortDesc": "位于别列津纳河谷、米哈伊洛夫卡村东南约4.4公里的一株古松。树龄200–250年。",
+    "fullDesc": "📍 位置：\n白俄罗斯博布鲁伊斯克区，戈尔巴采维奇乡米哈伊洛夫卡村东南4.4公里。\n\n📌 地位与历史：\n纪念碑于2014年批准设立，用于保护当地基因资源，具有科学、美学和生态教育价值。\n\n🌲 特征：\n巨松生长在1.5公顷橡树林中。橡树和松树树龄200–250年。树干1.3米高处直径370厘米，总高35.2米，树皮像鳞片。\n\n🌳 周围环境：\n附近还有一株非常古老的松树和几棵大型橡树。",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "E. Gladkova，《古老的松树获得保护地位》//《劳动论坛报》（博布鲁伊斯克），2015年2月4日。"
+      },
+      {
+        "title": "莫吉廖夫州旅游地图 — 世纪松",
+        "url": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
+      }
+    ],
+    "details": {
+      "area": "1,5 га",
+      "year": "2014",
+      "status": "地方级植物自然纪念碑"
+    },
+    "qrUrl": "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop",
+    "qrLinks": [
+      "https://libmogilev.by/touristmap/region-bobruysk/nature.html#opentop"
+    ]
+  },
+  {
+    "id": "poymennaya-dubrava",
+    "name": "Floodplain Oak Forest",
+    "category": "botanical",
+    "categoryName": "地方级植物自然纪念碑",
+    "coords": [
+      53.0182,
+      29.2575
+    ],
+    "coordsAccuracy": "approximate",
+    "images": [
+      "images/poydubr.jpeg",
+      "images/poydubr2.jpeg"
+    ],
+    "shortDesc": "别列津纳河漫滩中的一片森林，面积629公顷，用于保护古老和珍稀树种。",
+    "fullDesc": "📍 位置：\n白俄罗斯博布鲁伊斯克区，博布鲁伊斯克以南10公里、达马诺沃村西南0.6公里，位于达马诺沃林业区。\n\n📌 地位与用途：\n“河漫滩橡树林”为地方级植物自然纪念碑，面积629公顷，用于保护古老和珍稀树种及其群落。\n\n🌳 林分：\n按树龄和生产力具有价值的橡树林占面积一半以上。树龄90–100年，个别橡树180–200年。主体由河漫滩橡树林和绣线菊黑桤林各占一半组成。\n\n🌿 其他森林：\n还分布有黑桤、松、桦、云杉、鹅耳枥和白杨林。",
+    "videoUrl": "https://www.youtube.com/watch?v=3_5wmaBh_Mc&t=387s",
+    "sources": [
+      {
+        "title": "《河漫滩橡树林》//《莫吉廖夫州特别保护自然区域》，D. G. Grummo 等编。— 莫吉廖夫，1999。第100页。"
+      },
+      {
+        "title": "博布鲁伊斯克区执行委员会 — 自然专题",
+        "url": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
+      }
+    ],
+    "details": {
+      "area": "629 га",
+      "status": "地方级植物自然纪念碑"
+    },
+    "qrUrl": "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda",
+    "qrLinks": [
+      "https://bobruisk-rik.gov.by/index.php/2013-02-01-06-14-28/turizm-sport-i-otdykh/itemlist/category/496-priroda"
+    ]
+  },
+  {
+    "id": "brody",
+    "name": "Brody",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      52.9692,
+      29.1145
+    ],
+    "images": [
+      "images/brodi.jpeg",
+      "images/brodi2.jpeg"
+    ],
+    "shortDesc": "Броды: 10 公顷, 1998 年 ГЛХУ «Бобруйский лесхоз».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Броды».\n\n📌 演示材料中的事实:\n建立于 в 1998 году. 面积 — 10 га. 所属单位 ГЛХУ «Бобруйский лесхоз». 该地独特的自然价值区域。",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "1998",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "velikie-brody",
+    "name": "Velikiye Brody",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      52.972,
+      29.12
+    ],
+    "images": [
+      "images/brodi.jpeg",
+      "images/brodi2.jpeg"
+    ],
+    "shortDesc": "Великие Броды: 52 公顷, 1998 年 ГЛХУ «Бобруйский лесхоз».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Великие Броды».\n\n📌 演示材料中的事实:\n建立于 в 1998 году. 面积 — 52 га. 所属单位 ГЛХУ «Бобруйский лесхоз». 该地独特的自然价值区域。",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "1998",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "velikoe",
+    "name": "Velikoye",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      53.25,
+      29.09
+    ],
+    "images": [
+      "images/velikoe.jpg",
+      "images/velikoe2.jpg"
+    ],
+    "shortDesc": "Великое: 136 公顷, 1995 年 ГЛХУ «Бобруйский лесхоз».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Великое».\n\n📌 演示材料中的事实:\n建立于 в 1995 году. 面积 — 136 га. 所属单位 ГЛХУ «Бобруйский лесхоз». 该地独特的自然价值区域。",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "1995",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "goreloye",
+    "name": "Goreloye",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      52.965,
+      29.105
+    ],
+    "images": [
+      "images/goreloye.png"
+    ],
+    "shortDesc": "Горелое: 72 公顷, 1998 年 ГЛХУ «Бобруйский лесхоз».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Горелое».\n\n📌 演示材料中的事实:\n建立于 в 1998 году. 面积 — 72 га. 所属单位 ГЛХУ «Бобруйский лесхоз». 该地独特的自然价值区域。",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "1998",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "lesnoy-moh",
+    "name": "Lesnoy Mokh",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      53.105,
+      29.3
+    ],
+    "images": [
+      "images/moh.jpeg"
+    ],
+    "shortDesc": "Лесной мох: 136 公顷, 1995 年 ГЛХУ «Бобруйский лесхоз».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Лесной мох».\n\n📌 演示材料中的事实:\n建立于 в 1995 году. 面积 — 136 га. 所属单位 ГЛХУ «Бобруйский лесхоз». 该地独特的自然价值区域。",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "1995",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "lipnyaki",
+    "name": "Lipnyaki",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      53.1219,
+      29.4949
+    ],
+    "images": [
+      "images/lipnyaki.jpg",
+      "images/lipnyaki2.jpg"
+    ],
+    "shortDesc": "Липняки: 379 公顷, 1994 年 ГЛХУ «Бобруйский лесхоз».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Липняки».\n\n📌 演示材料中的事实:\n建立于 в 1994 году. 面积 — 379 га. 所属单位 ГЛХУ «Бобруйский лесхоз». 该地独特的自然价值区域。",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "1994",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "podraga",
+    "name": "Podraga",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      53.085,
+      29.285
+    ],
+    "images": [
+      "images/podvelikiy_moh.jpg",
+      "images/podvelikiy_moh2.jpg"
+    ],
+    "shortDesc": "Подра公顷: 57 公顷, 1997 年 ГЛХУ «Бобруйский лесхоз».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Подрага».\n\n📌 演示材料中的事实:\n建立于 в 1997 году. 面积 — 57 га. 所属单位 ГЛХУ «Бобруйский лесхоз». 该地独特的自然价值区域。",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "1997",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "tazhilovichski-moh",
+    "name": "Tazhilovichski Mokh",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      52.99,
+      29.43
+    ],
+    "images": [
+      "images/moh.jpeg"
+    ],
+    "shortDesc": "Тажиловичский мох: 240 公顷, 2010 年 СПК «Колхоз им. Невского».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Тажиловичский мох».\n\n📌 演示材料中的事实:\n保护制度于 в 2010 году. Заказник находится на территории СПК «Колхоз им. Невского». 面积 — 240 га.",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "2010",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "terehovka",
+    "name": "Terekhovka",
+    "category": "hydrological",
+    "categoryName": "地方级水文保护区",
+    "coords": [
+      53.015,
+      29.48
+    ],
+    "images": [
+      "images/velikoe.jpg"
+    ],
+    "shortDesc": "Тереховка: 129 公顷, 2000 年 ГЛХУ «Бобруйский лесхоз».",
+    "fullDesc": "📍 位置与地位:\n地方级水文保护区 «Тереховка».\n\n📌 演示材料中的事实:\n保护地位于 в 2000 году. Место нахождения — Бобруйский район, ГЛХУ «Бобруйский лесхоз». 面积 — 129 га. 自然价值 — уникальный по природной ценности объект для данной местности.",
+    "videoUrl": "",
+    "sources": [
+      {
+        "title": "Презентация «Особо охраняемые территории Бобруйщины», слайды 17–25."
+      }
+    ],
+    "details": {
+      "area": "",
+      "year": "2000",
+      "status": "地方级水文保护区"
+    },
+    "coordsAccuracy": "approximate",
+    "coordsNote": "Положение на карте ориентировочное: в предоставленной презентации GPS-координаты объекта не указаны."
+  },
+  {
+    "id": "dubrava",
+    "name": "植物自然纪念物“Dubrava”",
+    "category": "botanical",
+    "categoryName": "地方级植物自然纪念物",
+    "coords": [
+      53.108,
+      29.278194
+    ],
+    "coordsAccuracy": "verified",
+    "images": [
+      "images/dubrava.jpg"
+    ],
+    "shortDesc": "位于普里别列津斯基林区、距博布鲁伊斯克以东约2公里的地方级植物自然纪念物。",
+    "fullDesc": "该保护地为一片约110—160年树龄的蕨类橡树林。所示位置为博布鲁伊斯克南部的普里别列津斯基林区。",
+    "details": {
+      "status": "地方级植物自然纪念物"
+    },
+    "sources": [
+      {
+        "title": "ООПТ: Бобруйский район — сведения о ботаническом памятнике природы «Дубрава»",
+        "url": "https://fgb.by/viewtopic.php?t=6356"
+      }
+    ]
+  }
+]

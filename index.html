@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b5f45">
+  <meta name="description" content="Интерактивный атлас природных уголков Бобруйщины.">
+  <title>Заповедная Бобруйщина — интерактивный атлас</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css?v=19">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="app-header">
+      <a class="brand" href="#" id="brand-home" aria-label="Заповедная Бобруйщина — главная">
+        <img src="icons/brand.svg" alt="" class="app-logo">
+        <span class="brand-copy">
+          <strong id="app-title">Заповедная Бобруйщина</strong>
+          <small id="app-subtitle">Интерактивный атлас природных уголков</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Основная навигация">
+        <button class="nav-link active" data-view="home" id="nav-home">Главная</button>
+        <button class="nav-link" data-view="map" id="nav-map">Карта</button>
+        <button class="nav-link" data-view="objects" id="nav-objects">Объекты</button>
+        <button class="nav-link" data-view="about" id="about-btn"><span id="about-btn-text">О проекте</span></button>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button id="lang-btn" class="header-pill" title="Выбрать язык">
+            <span class="lang-current">RU</span><img class="ui-icon tiny-icon chevron" src="icons/chevron-down.svg" alt="">
+          </button>
+          <div id="lang-dropdown" class="lang-dropdown hidden">
+            <button data-lang="ru" class="lang-option active">Русский</button>
+            <button data-lang="be" class="lang-option">Беларуская</button>
+            <button data-lang="en" class="lang-option">English</button>
+            <button data-lang="zh" class="lang-option">中文</button>
+          </div>
+        </div>
+        <button id="theme-toggle" class="round-control" title="Переключить тему" aria-label="Переключить тему"><img class="ui-icon theme-icon" src="icons/sun.svg" alt=""></button>
+        <button id="ai-btn" class="header-ai-btn" type="button" title="AI" aria-label="AI"><span>AI</span></button>
+        <button id="report-error-btn" class="report-error-btn" type="button" title="Сообщить об ошибке" aria-label="Сообщить об ошибке"><img class="report-error-icon-img" src="icons/bug-report.svg" alt=""></button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section id="home-view" class="home-view">
+        <div class="hero">
+          <div class="hero-photo" aria-hidden="true"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <div class="eyebrow"><span></span><span id="hero-eyebrow">ПРИРОДА · ИСТОРИЯ · НАСЛЕДИЕ</span></div>
+            <h1 id="hero-title">Заповедная<br><em>Бобруйщина</em></h1>
+            <p id="hero-subtitle">Интерактивный атлас природных уголков Бобруйского края</p>
+            <p class="hero-lead" id="hero-lead">Исследуйте охраняемые ландшафты, древние деревья, озёра и болотные комплексы — в одном цифровом путешествии.</p>
+            <div class="hero-actions">
+              <button class="primary-cta" data-view="map" id="hero-map-btn"><span id="hero-map-text">Открыть карту</span><span id="hero-map-label" aria-hidden="true">→</span></button>
+              <button class="secondary-cta" data-view="objects" id="hero-objects-btn"><span id="hero-objects-text">Исследовать объекты</span><span id="hero-objects-label" aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+          <div class="hero-stats" id="hero-stats">
+            <div class="stat-card"><strong id="stat-objects">0</strong><span id="stat-objects-label">природных<br>объектов</span></div>
+            <div class="stat-card"><strong id="stat-categories">3</strong><span id="stat-categories-label">категории<br>охраны</span></div>
+            <div class="stat-card"><strong id="stat-photos">0</strong><span id="stat-photos-label">фотографий<br>в атласе</span></div>
+          </div>
+        </div>
+
+        <section class="intro-strip">
+          <div class="section-heading">
+            <span class="eyebrow dark">ИССЛЕДУЙТЕ</span>
+            <h2 id="intro-title">Природа Бобруйщины —<br><em>ближе, чем кажется.</em></h2>
+          </div>
+          <div class="intro-copy">
+            <p id="intro-text">Откройте места, которые легко проехать мимо: вековые деревья, редкие болота, озёрные каскады и охраняемые ландшафты.</p>
+            <button class="text-link" data-view="objects" id="intro-link"><span id="intro-link-text">Смотреть каталог</span><span id="intro-link-label" aria-hidden="true">→</span></button>
+          </div>
+        </section>
+      </section>
+
+      <section id="explorer-view" class="explorer-view hidden">
+        <aside class="sidebar-left">
+          <div class="sidebar-heading">
+            <div>
+              <span class="eyebrow dark">АТЛАС</span>
+              <h2 id="object-list-title">Природные объекты</h2>
+            </div>
+            <span class="count-badge" id="total-count">0</span>
+          </div>
+
+          <div class="search-box">
+            <img class="search-icon ui-icon" src="icons/search.svg" alt="">
+            <input type="text" id="search-input" placeholder="Поиск объекта..." autocomplete="off">
+            <button id="clear-search" class="clear-search hidden" aria-label="Очистить поиск"><img class="ui-icon" src="icons/close.svg" alt=""></button>
+            <div id="search-results" class="search-results-dropdown hidden"></div>
+          </div>
+
+          <div class="filter-section">
+            <div class="section-label" id="filter-title">Категории</div>
+            <div class="filter-buttons">
+              <button class="filter-btn active" data-filter="all"><span class="filter-icon all-icon">◎</span><span id="filter-all">Все</span></button>
+              <button class="filter-btn" data-filter="landscape"><img class="filter-icon" src="icons/landscape.svg" alt=""><span id="filter-landscape">Ландшафтные</span></button>
+              <button class="filter-btn" data-filter="botanical"><img class="filter-icon" src="icons/botanical.svg" alt=""><span id="filter-botanical">Ботанические</span></button>
+              <button class="filter-btn" data-filter="hydrological"><img class="filter-icon" src="icons/hydrological.svg" alt=""><span id="filter-hydrological">Гидрологические</span></button>
+            </div>
+          </div>
+
+          <div class="map-style-selector">
+            <div class="section-label" id="map-style-title">Вид карты</div>
+            <select id="map-layer-select" aria-label="Вид карты">
+              <option value="hybrid" selected id="map-style-hybrid">Спутник + Гибрид</option>
+              <option value="osm" id="map-style-osm">Схема (OSM)</option>
+            </select>
+          </div>
+
+          <div class="object-list-container">
+            <ul id="object-list" class="object-list"></ul>
+          </div>
+        </aside>
+
+        <section class="map-wrapper">
+          <div class="map-toolbar">
+            <div class="map-title"><span class="live-dot"></span><span id="map-title-text">Интерактивная карта</span></div>
+            <div class="map-legend" aria-label="Категории объектов">
+              <span><i class="legend-dot botanical"></i><span id="legend-botanical">Ботанические</span></span>
+              <span><i class="legend-dot landscape"></i><span id="legend-landscape">Ландшафтные</span></span>
+              <span><i class="legend-dot hydrological"></i><span id="legend-hydrological">Гидрологические</span></span>
+            </div>
+            <button id="fit-all-btn" class="map-tool"><img class="ui-icon" src="icons/crosshair.svg" alt=""><span id="fit-all-label">Все объекты</span></button>
+          </div>
+          <button id="mobile-object-panel-btn" class="mobile-map-panel-btn" type="button"><img class="ui-icon" src="icons/map.svg" alt=""><span id="mobile-object-panel-label">Объекты</span></button>
+          <div id="map"></div>
+          <div class="map-attribution">Картографическая основа: OpenStreetMap / Esri</div>
+        </section>
+
+        <aside id="sidebar-right" class="sidebar-right">
+          <div class="sidebar-top-bar">
+            <div class="sidebar-category-block">
+              <img id="detail-category-icon" class="category-icon" src="icons/botanical.svg" alt="">
+              <span id="detail-category" class="category-badge">Природный объект</span>
+            </div>
+            <button id="close-right-sidebar" class="round-close" title="Закрыть"><img class="ui-icon" src="icons/close.svg" alt=""></button>
+          </div>
+          <div class="sidebar-content">
+            <div class="gallery-container">
+              <button class="gallery-arrow prev" aria-label="Предыдущее фото"><img class="ui-icon" src="icons/chevron-left.svg" alt=""></button>
+              <img id="detail-image" src="" alt="Фото объекта">
+              <button class="gallery-arrow next" aria-label="Следующее фото"><img class="ui-icon" src="icons/chevron-right.svg" alt=""></button>
+              <div id="gallery-counter" class="gallery-counter">1 / 1</div>
+            </div>
+            <h2 id="detail-title" class="object-title"></h2>
+            <p id="detail-short-desc" class="short-description"></p>
+            <div id="detail-extra" class="detail-extra" style="display:none"></div>
+            <button id="expand-sidebar-btn" class="expand-more-btn"><span id="expand-sidebar-label">Подробнее</span><img class="ui-icon" src="icons/arrow-right.svg" alt=""></button>
+          </div>
+        </aside>
+      </section>
+
+      <section id="objects-catalog-view" class="objects-catalog-view hidden">
+        <div class="catalog-inner">
+          <div class="catalog-hero">
+            <div>
+              <div class="eyebrow dark"><span></span> <span id="catalog-kicker">АТЛАС ПРИРОДНЫХ МЕСТ</span></div>
+              <h2 id="catalog-title">Природные объекты</h2>
+              <p id="catalog-subtitle">Исследуйте охраняемые территории, памятники природы и уникальные природные комплексы Бобруйщины.</p>
+            </div>
+            <button class="catalog-map-btn" data-view="map"><img class="ui-icon" src="icons/map.svg" alt=""><span id="catalog-map-label">Открыть карту</span><img class="ui-icon" src="icons/arrow-right.svg" alt=""></button>
+          </div>
+          <div class="catalog-toolbar">
+            <div class="catalog-toolbar-left">
+              <div class="catalog-count"><span id="catalog-count">0</span> <span id="catalog-count-label">объектов в атласе</span></div>
+              <div class="catalog-search-box">
+                <img class="ui-icon" src="icons/search.svg" alt="">
+                <input id="catalog-search-input" type="search" placeholder="Поиск объекта..." autocomplete="off">
+                <button id="catalog-search-clear" class="catalog-search-clear hidden" type="button" aria-label="Очистить поиск"><img class="ui-icon" src="icons/close.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="catalog-filters" id="catalog-filters"></div>
+          </div>
+          <div id="catalog-grid" class="catalog-grid"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Полная информация об объекте: отдельная страница внутри раздела «Объекты» -->
+  <section id="object-detail-view" class="object-detail-view hidden">
+    <div class="object-detail-inner">
+      <div class="object-detail-nav">
+        <button id="object-detail-back" class="page-back-btn" type="button"><img class="ui-icon" src="icons/chevron-left.svg" alt=""><span id="object-detail-back-label">Назад</span></button>
+        <span id="object-detail-origin" class="detail-origin-label">Из объектов</span>
+        <button id="object-detail-close" class="detail-page-close" type="button" aria-label="Закрыть"><img class="ui-icon" src="icons/close.svg" alt=""></button>
+      </div>
+      <header class="object-detail-header">
+        <div class="modal-category-block"><img id="object-detail-category-icon" class="category-icon" src="icons/botanical.svg" alt=""><span id="object-detail-category" class="category-badge">Природный объект</span></div>
+        <h1 id="object-detail-title" class="object-detail-title"></h1>
+      </header>
+      <div class="object-detail-media-grid">
+        <section class="detail-media-card">
+          <div class="detail-section-head"><span id="object-detail-gallery-title">Фотогалерея</span></div>
+          <div class="object-detail-gallery">
+            <button class="object-detail-gallery-arrow prev" id="object-detail-gallery-prev" type="button" aria-label="Предыдущее фото"><img class="ui-icon" src="icons/chevron-left.svg" alt=""></button>
+            <img id="object-detail-image" src="" alt="Фото объекта">
+            <button class="object-detail-gallery-arrow next" id="object-detail-gallery-next" type="button" aria-label="Следующее фото"><img class="ui-icon" src="icons/chevron-right.svg" alt=""></button>
+            <div id="object-detail-counter" class="modal-gallery-counter">1 / 1</div>
+          </div>
+        </section>
+        <section class="detail-media-card">
+          <div class="detail-section-head"><span id="object-detail-video-title">Видеоэкскурсия</span></div>
+          <div class="object-detail-video">
+            <iframe id="object-detail-video" src="" title="Видео об объекте" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div id="object-detail-video-placeholder" class="video-placeholder"><span id="object-detail-no-video">Видео для этого объекта пока не добавлено</span></div>
+          </div>
+          <a id="object-detail-youtube-link" class="youtube-open-link hidden" href="#" target="_blank" rel="noopener"><span id="youtube-open-text">Открыть видео на YouTube</span><img class="ui-icon" src="icons/external.svg" alt=""></a>
+        </section>
+      </div>
+      <div id="object-detail-facts" class="object-detail-facts"></div>
+      <section class="object-detail-copy">
+        <div class="content-kicker" id="object-detail-description-title">Подробное описание</div>
+        <div id="object-detail-full-desc" class="full-text"></div>
+      </section>
+      <section class="object-detail-sources-grid">
+        <div class="object-detail-sources">
+          <div class="content-kicker" id="object-detail-sources-title">Источники</div>
+          <ul id="object-detail-sources"></ul>
+        </div>
+        <div id="object-detail-qr-col" class="object-detail-qr hidden">
+          <div class="content-kicker" id="object-detail-qr-label">Ссылка для QR-кода</div>
+          <div class="qr-code-container"><img id="object-detail-qr-code" src="" alt="QR-код"><button id="object-detail-qr-expand" class="qr-expand-btn" type="button" title="Увеличить QR-код"><img class="ui-icon" src="icons/zoom.svg" alt=""></button></div>
+          <a id="object-detail-source-link" class="qr-source-link" href="#" target="_blank" rel="noopener"></a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <div id="image-viewer" class="image-viewer-backdrop hidden"><button id="close-image-viewer" class="image-viewer-close" type="button"><img class="ui-icon" src="icons/close.svg" alt=""></button><img id="image-viewer-img" src="" alt="Увеличенное изображение"></div>
+  <div id="qr-viewer" class="qr-viewer-backdrop hidden"><button id="close-qr-viewer" class="qr-viewer-close" type="button"><img class="ui-icon" src="icons/close.svg" alt=""></button><div class="qr-viewer-content"><img id="qr-viewer-img" src="" alt="QR-код"><div class="qr-viewer-links"><div class="content-kicker" id="qr-viewer-label">Ссылка для QR-кода</div><ul id="qr-viewer-sources"></ul></div></div></div>
+
+  <!-- Отчёт об ошибке: отправляется на почту владельца через FormSubmit. -->
+  <div id="report-error-modal" class="report-modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="report-error-title">
+    <div class="report-modal">
+      <div class="report-modal-head">
+        <div>
+          <div class="content-kicker" id="report-error-kicker">ОБРАТНАЯ СВЯЗЬ</div>
+          <h2 id="report-error-title">Сообщить об ошибке</h2>
+        </div>
+        <button id="report-error-close" class="round-close" type="button" aria-label="Закрыть"><img class="ui-icon" src="icons/close.svg" alt=""></button>
+      </div>
+      <p id="report-error-intro" class="report-modal-intro">Опишите, что работает неправильно. Страница и выбранный объект подставятся автоматически.</p>
+      <form id="report-error-form" class="report-form">
+        <input type="hidden" name="page" id="report-error-page">
+        <input type="hidden" name="object" id="report-error-object">
+        <input type="hidden" name="url" id="report-error-url">
+        <label><span id="report-error-message-label">Что произошло?</span><textarea name="message" id="report-error-message" rows="6" required placeholder="Например: кнопка «Подробнее» не открывает объект..."></textarea></label>
+        <label><span id="report-error-email-label">Ваш e-mail (необязательно)</span><input type="email" name="email" id="report-error-email" placeholder="Чтобы можно было ответить вам"></label>
+        <div id="report-error-status" class="report-error-status" aria-live="polite"></div>
+        <div class="report-form-actions">
+          <button id="report-error-cancel" class="secondary-cta" type="button"><span id="report-error-cancel-label">Отмена</span></button>
+          <button id="report-error-submit" class="primary-cta" type="submit"><span id="report-error-submit-label">Отправить отчёт</span><span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="ai-toast" class="ai-toast hidden" role="status" aria-live="polite"><span class="ai-toast-dot"></span><span id="ai-toast-text">В разработке</span></div>
+
+  <!-- О проекте: полноценная навигационная страница -->
+  <section id="about-view" class="about-view hidden">
+    <div class="about-page-shell">
+      <header class="about-hero">
+        <div class="about-hero-copy">
+          <div class="eyebrow dark"><span></span><span id="about-kicker">О ПРОЕКТЕ</span></div>
+          <h2 id="about-title">Путеводитель по заповедной природе</h2>
+          <p id="about-text1" class="about-lead">Цифровой атлас природных уголков Бобруйщины — карта, каталог, фотографии и видеоматериалы в одном месте.</p>
+          <div class="about-hero-actions">
+            <button class="about-action" type="button" data-view="map"><img class="ui-icon" src="icons/map.svg" alt=""><span id="about-open-map">Открыть карту</span><img class="ui-icon" src="icons/arrow-right.svg" alt=""></button>
+            <button class="about-action secondary" type="button" data-view="objects"><span id="about-open-objects">Перейти к объектам</span><img class="ui-icon" src="icons/arrow-right.svg" alt=""></button>
+          </div>
+        </div>
+        <div class="about-hero-card">
+          <div class="about-card-number">01</div>
+          <div>
+            <div class="about-card-label" id="about-card-label">ИДЕЯ</div>
+            <p id="about-text2">Проект помогает рассматривать природное наследие Бобруйщины не как список названий, а как связанную карту мест, историй и визуальных материалов.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="about-features" aria-label="Возможности проекта">
+        <article class="feature-item"><span class="feature-number">01</span><div><strong id="about-feature-title1">Исследуйте</strong><p id="about-feature1">Находите природные объекты на карте и переходите между местоположением и каталогом.</p></div></article>
+        <article class="feature-item"><span class="feature-number">02</span><div><strong id="about-feature-title2">Смотрите</strong><p id="about-feature2">Изучайте фотографии и доступные видеоматериалы прямо на странице объекта.</p></div></article>
+        <article class="feature-item"><span class="feature-number">03</span><div><strong id="about-feature-title3">Узнавайте</strong><p id="about-feature3">Читайте сведения об объекте и знакомьтесь с источниками, указанными в материалах проекта.</p></div></article>
+      </section>
+
+      <section class="about-section-block about-author-block">
+        <div class="about-section-heading"><span class="about-section-kicker" id="about-author-kicker">ОБ АВТОРЕ</span><span class="about-section-rule"></span></div>
+        <div class="about-author-layout">
+          <div class="author-avatar about-author-avatar"><img src="images/ico.jpeg" alt="Аватар автора" class="avatar-img"></div>
+          <div class="about-author-main">
+            <div class="about-author-top"><div id="about-author-name" class="author-name">Кирилл Шаповалов</div><span id="about-author-age" class="author-age">16 лет</span></div>
+            <div id="about-author-nick" class="author-nick">Indigo</div>
+            <p id="about-author-description" class="author-description">Автор проекта и разработчик цифрового атласа.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section-block about-details-block">
+        <div class="about-section-heading"><span class="about-section-kicker" id="about-details-kicker">О САЙТЕ</span><span class="about-section-rule"></span></div>
+        <div class="about-details-grid">
+          <div>
+            <h3 id="about-details-title">Подробнее о сайте</h3>
+            <p id="about-details-text" class="about-details-copy">Сайт создан на HTML5, CSS3 и JavaScript. Для интерактивной карты используется Leaflet; локальные изображения и SVG-иконки входят в состав проекта, а сведения об объектах хранятся в языковых наборах данных.</p>
+          </div>
+          <div class="about-tech-list">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Leaflet</span><span>Responsive</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="about-footer">
+        <div><span class="about-footer-mark">↗</span><strong id="about-footer">Сохраним природное наследие Бобруйщины вместе!</strong></div>
+      </footer>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" onerror="window.LEAFLET_LOAD_FAILED=true"></script>
+  <script src="embedded-data.js?v=21"></script>
+  <script src="embedded-locales.js?v=21"></script>
+  <script src="report-config.js?v=21"></script>
+  <script src="script.js?v=21"></script>
+</body>
+</html>
